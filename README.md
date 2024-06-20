@@ -28,10 +28,4 @@ entidade A e B.
 - Ao entregar, fornecer o script do Banco de dados, o código do backend e instruções de como
 realizar as requisições HTTP.
 
-### Observações
-• **O trabalho pode ser feito em dupla.**
-• **Entregas em atraso terão penalidade de dois pontos por dia.**
-• **Colas serão punidos com nota zero.**
-• **A entrega do trabalho deve ser utilizando um repositório na plataforma Github. Não
-será aceito outra forma de entrega.**
 
