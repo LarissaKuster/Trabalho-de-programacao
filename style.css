@@ -1,0 +1,103 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Inknut Antiqua", serif;
+    font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px black solid;
+}
+
+.navbar div {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    display: inline;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    gap: 10px;
+    font-size: 23px;
+    padding: 50px;
+    height: 50vh;
+    background-color: rgb(138, 138, 138, 5%);
+    border-radius: 10px;
+}
+
+form label {
+    line-height: 30px;
+}
+
+form h3 {
+    text-align: center;
+    font-weight: 400;
+    margin: -20px;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+form .campo {
+    background-color: black;
+    width: 100%;
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+    height: 4vh;
+}
+
+form .submit {
+    width: 10vw;
+    align-self: center;
+    background-color: black;
+    border-style: none;
+    height: 7vh;
+    border-radius: 7px;
+    color: white;
+}
+
+.navbar li {
+    margin: 20px;
+    font-size: 20px;
+}
+
+main {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    gap: 300px;
+    justify-content: space-around;
+}
+
+.imagem {
+    width: 450px;
+    height: 325px;
+    border: 2px solid;
+    border-radius: 30px;
+}
+
+footer {
+    bottom: auto;
+    border-top: 4px black solid;
+    height: 1vh;
+}
