@@ -1,0 +1,23 @@
+{
+  "name": "trabalho-de-programacao",
+  "version": "1.0.0",
+  "description": "de dados MYSQL. O aplicativo deve gerenciar duas entidades que possuem relacionamentos. O rela-\r cionamento deve ser 1 para N ou N para N.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.10.1",
+    "sequelize": "^6.37.3"
+  }
+}
