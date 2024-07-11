@@ -7,7 +7,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     font-family: "Inknut Antiqua", serif;
     font-style: normal;
 }
@@ -82,10 +82,12 @@ form .submit {
 }
 
 main {
-    height: 75vh;
+    /* max-height: 100vh; */
+    /* height: 75vh; */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 300px;
+    /* gap: 300px; */
     justify-content: space-around;
 }
 
@@ -97,7 +99,7 @@ main {
 }
 
 footer {
-    bottom: auto;
+    /* bottom: auto; */
     border-top: 4px black solid;
     height: 1vh;
 }

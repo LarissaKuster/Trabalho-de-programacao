@@ -1,11 +1,11 @@
 const URL = "http://localhost:3000/livro/"
 
 function criarLinhaLivro(livro){
-    return `<divclass="linhaLivro">
-        <tr><th>`+livro.nome+`</th>
-        <th>`+livro.descricao+`</th>
-        <th>`+livro.quantidade+`</th></tr>
-    </div>`
+    return `<div class="linhaLivro">
+                <p>`+livro.nome+`</p>
+                <p>`+livro.descricao+`</p>
+                <p>`+livro.quantidade+`</p>
+            </div>`
 }
 
 fetch(URL).then(function(response) {
