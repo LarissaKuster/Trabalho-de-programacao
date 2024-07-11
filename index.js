@@ -4,9 +4,16 @@ const livro = require("./livro.js")
 const cliente = require("./cliente.js") 
 const emprestimo = require("./emprestimo.js") 
 
+
 const app = express()
 app.use(express.json())
 
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+    next();
+  });
 const PORTA = 3000
 app.listen( PORTA, function(){
     console.log("Servidor iniciados na porta "+PORTA);
@@ -106,6 +113,16 @@ app.get("/emprestimo/:id",async function(req, res) {
     
 })
 
+app.get("/emprestimo/:datadevolucao",async function(req, res) {
+    const resultado = await emprestimo.emprestimo.findByPk(req.params.datadevolucao)
+    if( resultado == null ){
+        res.status(404).send({})
+    }else{
+        res.send(resultado);
+    }
+    
+})
+
 app.delete("/livro/:id",async function(req,res){
     const resultado = await livro.livro.destroy({
         where:{
@@ -119,36 +136,10 @@ app.delete("/livro/:id",async function(req,res){
     }
 })
 
-app.delete("/livro/:nome",async function(req,res){
-    const resultado = await livro.livro.destroy({
-        where:{
-            nome:req.params.nome
-        }
-    })
-    if( resultado == 0 ){
-        res.status(404).send({})
-    }else{
-        res.status(204).send({})
-    }
-})
-
 app.delete("/cliente/:id",async function(req,res){
     const resultado = await cliente.cliente.destroy({
         where:{
             id:req.params.id
-        }
-    })
-    if( resultado == 0 ){
-        res.status(404).send({})
-    }else{
-        res.status(204).send({})
-    }
-})
-
-app.delete("/cliente/:nome",async function(req,res){
-    const resultado = await cliente.cliente.destroy({
-        where:{
-            nome:req.params.nome
         }
     })
     if( resultado == 0 ){

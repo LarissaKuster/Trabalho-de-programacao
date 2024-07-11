@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <script src="/livros.js"></script>
+    <link rel="stylesheet" href="/css/tabela.css">
 </head>
 
 <body>
@@ -25,18 +27,10 @@
         </ul>
     </nav>
     <main>
-        <div><img class="imagem" src="images/image.png" alt="imagem"></div>
         <div>
-            <form action="/logar" method="get" class="login">
-                <h3>Login</h3>
-                <label for="user">Nome de usuário ou email<br><input type="text" name="user" id="user" class="campo"
-                        required></label>
-
-                <label for="senha">Senha<br><input type="password" name="senha" id="senha" class="campo"
-                        required></label>
-
-                <input type="submit" value="ENTRAR" class="submit">
-            </form>
+            <table id="tabelaLivro" width="100%" cellspacing="50">
+                <tr><td>Nome</td><td>Descrição</td><td>quantidade</td></tr>
+            </table>
         </div>
     </main>
     <footer>
