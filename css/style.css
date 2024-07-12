@@ -103,3 +103,11 @@ footer {
     border-top: 4px black solid;
     height: 1vh;
 }
+
+ul li a{
+    text-decoration: none;
+    color: black;    
+}
+.here{
+    transform: translateY(-20px);
+}

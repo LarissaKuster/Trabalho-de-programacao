@@ -52,7 +52,7 @@ app.get("/livro/",async function(req, res) {
 })
 
 app.get("/livro/:id",async function(req, res) {
-    const resultado = await cliente.cliente.findByPk(req.params.id)
+    const resultado = await livro.livro.findByPk(req.params.id)
     if( resultado == null ){
         res.status(404).send({})
     }else{

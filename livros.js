@@ -1,7 +1,7 @@
 const URL = "http://localhost:3000/livro/"
 
 function criarLinhaLivro(livro){
-    return `<div class="linhaLivro">
+    return `<div class="linha">
                 <p>`+livro.nome+`</p>
                 <p>`+livro.descricao+`</p>
                 <p>`+livro.quantidade+`</p>
@@ -20,8 +20,7 @@ fetch(URL).then(function(response) {
 });
 
 function adicionarLivros(){
-    var tabelaLivro = document.getElementById("tabelaLivro")
-    // tabelaLivro.innerHTML += iniciarTabela()
+    var tabelaLivro = document.getElementById("tabela")
     for (let i = 0; i < listaLivros.length; i++) {
         const livro = listaLivros[i];
         tabelaLivro.innerHTML += criarLinhaLivro(livro)
