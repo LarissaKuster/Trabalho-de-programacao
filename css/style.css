@@ -99,7 +99,7 @@ main {
 }
 
 footer {
-    /* bottom: auto; */
+    bottom: 0;
     border-top: 4px black solid;
     height: 1vh;
 }
